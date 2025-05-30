@@ -3,7 +3,7 @@ name: CI_EIOPS
 on: [push]
 
 jobs:
-  eiops_stage1:
+  eiops_CI:
 
       runs-on: ubuntu-latest
       
@@ -15,4 +15,31 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo "BotecoUnix | EIOPS"
+
+  eiops_Fortify:
+
+      runs-on: ubuntu-latest
+      
+      steps:
+      - uses: actions/checkout@v1
+      - name: Running validate Fortify
+        run: |
+          echo "Listing Files : $(ls -l /etc)"
+          echo $(date)
+
+  eiops_BuildPublish:
+
+      runs-on: ubuntu-latest
+      
+      steps:
+      - uses: actions/checkout@v1
+      - name: Running CD Process
+        run: |
+          echo "Initialize Build App..."
+          sleep 3
+          echo "Build Completed!"
+      - name: Running publish package
+        run: |
+          echo Publish package
           echo "BotecoUnix | EIOPS"
