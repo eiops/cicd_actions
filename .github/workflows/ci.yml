@@ -3,7 +3,7 @@ name: CI_EIOPS
 on: [push]
 
 jobs:
-  build:
+  eiops_stage1:
 
     runs-on: ubuntu-latest
     
