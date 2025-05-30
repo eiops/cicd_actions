@@ -5,14 +5,14 @@ on: [push]
 jobs:
   eiops_stage1:
 
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v1
-    - name: Running eiops script one line
-      run: echo Hello, world $(hostname)!
-    - name: Running eiops script multiline
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
-        echo "BotecoUnix | EIOPS"
+      runs-on: ubuntu-latest
+      
+      steps:
+      - uses: actions/checkout@v1
+      - name: Running eiops script one line
+        run: echo Hello, world $(hostname)!
+      - name: Running eiops script multiline
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+          echo "BotecoUnix | EIOPS"
