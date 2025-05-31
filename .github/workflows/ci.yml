@@ -29,6 +29,8 @@ jobs:
   
   eiops_Sonar:
       runs-on: ubuntu-latest
+      needs: eiops_Fortify
+
       steps:
       - uses: actions/checkout@v1
       - name: Final build status indicator
@@ -50,7 +52,7 @@ jobs:
       needs: 
         - eiops_Fortify
         - eiops_Sonar
-        
+
       steps:
       - uses: actions/checkout@v1
       - name: Running CD Process
